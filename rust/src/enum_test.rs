@@ -4,7 +4,7 @@ use gdnative::prelude::*;
 #[variant(enum = "repr")]
 #[repr(i32)]
 pub enum Direction {
-    Top = -1,
+    Up = -1,
     Down = 1,
 }
 
@@ -21,7 +21,7 @@ pub struct Move {
 impl Move {
     pub fn new(_owner: &Node2D) -> Self {
         Self {
-            dir: Direction::Top,
+            dir: Direction::Up,
             speed: 1.0,
         }
     }
@@ -42,8 +42,8 @@ impl Move {
     fn _input(&mut self, evt: Ref<InputEvent>) {
         if unsafe { evt.assume_safe() }.is_action_pressed("ui_accept", false, false) {
             self.dir = match self.dir {
-                Direction::Top => Direction::Down,
-                Direction::Down => Direction::Top,
+                Direction::Up => Direction::Down,
+                Direction::Down => Direction::Up,
             };
         }
     }
