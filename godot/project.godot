@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="enum-property-custom-discriminants"
+config/name="export-enum-demo"
 run/main_scene="res://scenes/Move.tscn"
 config/icon="res://assets/godot-ferris-32x32.png"
 

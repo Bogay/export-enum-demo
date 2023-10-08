@@ -92,8 +92,13 @@ mv ../target/aarch64-linux-android/debug/*.so ../lib/aarch64-linux-android
 
 [tasks.build-aarch64-linux-android-debug]
 run_task = [
-    { name = "ps1-build-aarch64-linux-android-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-aarch64-linux-android-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-aarch64-linux-android-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-aarch64-linux-android-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-aarch64-linux-android-debug]
@@ -101,7 +106,7 @@ dependencies = ["build-aarch64-linux-android-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Android.aarch64-linux-android.debug" ../bin/aarch64-linux-android/enum-property-custom-discriminants.debug.aarch64-linux-android.apk
+godot --export-debug "Android.aarch64-linux-android.debug" ../bin/aarch64-linux-android/export-enum-demo.debug.aarch64-linux-android.apk
 '''
 
 [tasks.ps1-build-aarch64-linux-android-release]
@@ -125,8 +130,13 @@ mv ../target/aarch64-linux-android/release/*.so ../lib/aarch64-linux-android
 
 [tasks.build-aarch64-linux-android-release]
 run_task = [
-    { name = "ps1-build-aarch64-linux-android-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-aarch64-linux-android-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-aarch64-linux-android-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-aarch64-linux-android-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-aarch64-linux-android-release]
@@ -134,7 +144,7 @@ dependencies = ["build-aarch64-linux-android-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Android.aarch64-linux-android.release" ../bin/aarch64-linux-android/enum-property-custom-discriminants.release.aarch64-linux-android.apk
+godot --export "Android.aarch64-linux-android.release" ../bin/aarch64-linux-android/export-enum-demo.release.aarch64-linux-android.apk
 '''
 
 [tasks.ps1-build-armv7-linux-androideabi-debug]
@@ -158,8 +168,13 @@ mv ../target/armv7-linux-androideabi/debug/*.so ../lib/armv7-linux-androideabi
 
 [tasks.build-armv7-linux-androideabi-debug]
 run_task = [
-    { name = "ps1-build-armv7-linux-androideabi-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-armv7-linux-androideabi-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-armv7-linux-androideabi-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-armv7-linux-androideabi-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-armv7-linux-androideabi-debug]
@@ -167,7 +182,7 @@ dependencies = ["build-armv7-linux-androideabi-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Android.armv7-linux-androideabi.debug" ../bin/armv7-linux-androideabi/enum-property-custom-discriminants.debug.armv7-linux-androideabi.apk
+godot --export-debug "Android.armv7-linux-androideabi.debug" ../bin/armv7-linux-androideabi/export-enum-demo.debug.armv7-linux-androideabi.apk
 '''
 
 [tasks.ps1-build-armv7-linux-androideabi-release]
@@ -191,8 +206,13 @@ mv ../target/armv7-linux-androideabi/release/*.so ../lib/armv7-linux-androideabi
 
 [tasks.build-armv7-linux-androideabi-release]
 run_task = [
-    { name = "ps1-build-armv7-linux-androideabi-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-armv7-linux-androideabi-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-armv7-linux-androideabi-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-armv7-linux-androideabi-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-armv7-linux-androideabi-release]
@@ -200,7 +220,7 @@ dependencies = ["build-armv7-linux-androideabi-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Android.armv7-linux-androideabi.release" ../bin/armv7-linux-androideabi/enum-property-custom-discriminants.release.armv7-linux-androideabi.apk
+godot --export "Android.armv7-linux-androideabi.release" ../bin/armv7-linux-androideabi/export-enum-demo.release.armv7-linux-androideabi.apk
 '''
 
 [tasks.ps1-build-i686-linux-android-debug]
@@ -224,8 +244,13 @@ mv ../target/i686-linux-android/debug/*.so ../lib/i686-linux-android
 
 [tasks.build-i686-linux-android-debug]
 run_task = [
-    { name = "ps1-build-i686-linux-android-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-linux-android-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-linux-android-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-linux-android-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-linux-android-debug]
@@ -233,7 +258,7 @@ dependencies = ["build-i686-linux-android-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Android.i686-linux-android.debug" ../bin/i686-linux-android/enum-property-custom-discriminants.debug.i686-linux-android.apk
+godot --export-debug "Android.i686-linux-android.debug" ../bin/i686-linux-android/export-enum-demo.debug.i686-linux-android.apk
 '''
 
 [tasks.ps1-build-i686-linux-android-release]
@@ -257,8 +282,13 @@ mv ../target/i686-linux-android/release/*.so ../lib/i686-linux-android
 
 [tasks.build-i686-linux-android-release]
 run_task = [
-    { name = "ps1-build-i686-linux-android-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-linux-android-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-linux-android-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-linux-android-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-linux-android-release]
@@ -266,7 +296,7 @@ dependencies = ["build-i686-linux-android-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Android.i686-linux-android.release" ../bin/i686-linux-android/enum-property-custom-discriminants.release.i686-linux-android.apk
+godot --export "Android.i686-linux-android.release" ../bin/i686-linux-android/export-enum-demo.release.i686-linux-android.apk
 '''
 
 [tasks.ps1-build-x86_64-linux-android-debug]
@@ -290,8 +320,13 @@ mv ../target/x86_64-linux-android/debug/*.so ../lib/x86_64-linux-android
 
 [tasks.build-x86_64-linux-android-debug]
 run_task = [
-    { name = "ps1-build-x86_64-linux-android-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-linux-android-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-linux-android-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-linux-android-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-linux-android-debug]
@@ -299,7 +334,7 @@ dependencies = ["build-x86_64-linux-android-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Android.x86_64-linux-android.debug" ../bin/x86_64-linux-android/enum-property-custom-discriminants.debug.x86_64-linux-android.apk
+godot --export-debug "Android.x86_64-linux-android.debug" ../bin/x86_64-linux-android/export-enum-demo.debug.x86_64-linux-android.apk
 '''
 
 [tasks.ps1-build-x86_64-linux-android-release]
@@ -323,8 +358,13 @@ mv ../target/x86_64-linux-android/release/*.so ../lib/x86_64-linux-android
 
 [tasks.build-x86_64-linux-android-release]
 run_task = [
-    { name = "ps1-build-x86_64-linux-android-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-linux-android-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-linux-android-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-linux-android-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-linux-android-release]
@@ -332,7 +372,7 @@ dependencies = ["build-x86_64-linux-android-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Android.x86_64-linux-android.release" ../bin/x86_64-linux-android/enum-property-custom-discriminants.release.x86_64-linux-android.apk
+godot --export "Android.x86_64-linux-android.release" ../bin/x86_64-linux-android/export-enum-demo.release.x86_64-linux-android.apk
 '''
 
 [tasks.ps1-build-i686-unknown-linux-gnu-debug]
@@ -356,8 +396,13 @@ mv ../target/i686-unknown-linux-gnu/debug/*.so ../lib/i686-unknown-linux-gnu
 
 [tasks.build-i686-unknown-linux-gnu-debug]
 run_task = [
-    { name = "ps1-build-i686-unknown-linux-gnu-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-unknown-linux-gnu-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-unknown-linux-gnu-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-unknown-linux-gnu-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-unknown-linux-gnu-debug]
@@ -365,7 +410,7 @@ dependencies = ["build-i686-unknown-linux-gnu-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Linux/X11.i686-unknown-linux-gnu.debug" ../bin/i686-unknown-linux-gnu/enum-property-custom-discriminants.debug.i686-unknown-linux-gnu
+godot --export-debug "Linux/X11.i686-unknown-linux-gnu.debug" ../bin/i686-unknown-linux-gnu/export-enum-demo.debug.i686-unknown-linux-gnu
 '''
 
 [tasks.ps1-build-i686-unknown-linux-gnu-release]
@@ -389,8 +434,13 @@ mv ../target/i686-unknown-linux-gnu/release/*.so ../lib/i686-unknown-linux-gnu
 
 [tasks.build-i686-unknown-linux-gnu-release]
 run_task = [
-    { name = "ps1-build-i686-unknown-linux-gnu-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-unknown-linux-gnu-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-unknown-linux-gnu-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-unknown-linux-gnu-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-unknown-linux-gnu-release]
@@ -398,7 +448,7 @@ dependencies = ["build-i686-unknown-linux-gnu-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Linux/X11.i686-unknown-linux-gnu.release" ../bin/i686-unknown-linux-gnu/enum-property-custom-discriminants.release.i686-unknown-linux-gnu
+godot --export "Linux/X11.i686-unknown-linux-gnu.release" ../bin/i686-unknown-linux-gnu/export-enum-demo.release.i686-unknown-linux-gnu
 '''
 
 [tasks.ps1-build-x86_64-unknown-linux-gnu-debug]
@@ -422,8 +472,13 @@ mv ../target/x86_64-unknown-linux-gnu/debug/*.so ../lib/x86_64-unknown-linux-gnu
 
 [tasks.build-x86_64-unknown-linux-gnu-debug]
 run_task = [
-    { name = "ps1-build-x86_64-unknown-linux-gnu-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-unknown-linux-gnu-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-unknown-linux-gnu-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-unknown-linux-gnu-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-unknown-linux-gnu-debug]
@@ -431,7 +486,7 @@ dependencies = ["build-x86_64-unknown-linux-gnu-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Linux/X11.x86_64-unknown-linux-gnu.debug" ../bin/x86_64-unknown-linux-gnu/enum-property-custom-discriminants.debug.x86_64-unknown-linux-gnu
+godot --export-debug "Linux/X11.x86_64-unknown-linux-gnu.debug" ../bin/x86_64-unknown-linux-gnu/export-enum-demo.debug.x86_64-unknown-linux-gnu
 '''
 
 [tasks.ps1-build-x86_64-unknown-linux-gnu-release]
@@ -455,8 +510,13 @@ mv ../target/x86_64-unknown-linux-gnu/release/*.so ../lib/x86_64-unknown-linux-g
 
 [tasks.build-x86_64-unknown-linux-gnu-release]
 run_task = [
-    { name = "ps1-build-x86_64-unknown-linux-gnu-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-unknown-linux-gnu-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-unknown-linux-gnu-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-unknown-linux-gnu-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-unknown-linux-gnu-release]
@@ -464,7 +524,7 @@ dependencies = ["build-x86_64-unknown-linux-gnu-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Linux/X11.x86_64-unknown-linux-gnu.release" ../bin/x86_64-unknown-linux-gnu/enum-property-custom-discriminants.release.x86_64-unknown-linux-gnu
+godot --export "Linux/X11.x86_64-unknown-linux-gnu.release" ../bin/x86_64-unknown-linux-gnu/export-enum-demo.release.x86_64-unknown-linux-gnu
 '''
 
 [tasks.ps1-build-x86_64-apple-darwin-debug]
@@ -488,8 +548,13 @@ mv ../target/x86_64-apple-darwin/debug/*.dylib ../lib/x86_64-apple-darwin
 
 [tasks.build-x86_64-apple-darwin-debug]
 run_task = [
-    { name = "ps1-build-x86_64-apple-darwin-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-apple-darwin-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-apple-darwin-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-apple-darwin-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-apple-darwin-debug]
@@ -497,7 +562,7 @@ dependencies = ["build-x86_64-apple-darwin-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Mac OSX.x86_64-apple-darwin.debug" ../bin/x86_64-apple-darwin/enum-property-custom-discriminants.debug.x86_64-apple-darwin.dmg
+godot --export-debug "Mac OSX.x86_64-apple-darwin.debug" ../bin/x86_64-apple-darwin/export-enum-demo.debug.x86_64-apple-darwin.dmg
 '''
 
 [tasks.ps1-build-x86_64-apple-darwin-release]
@@ -521,8 +586,13 @@ mv ../target/x86_64-apple-darwin/release/*.dylib ../lib/x86_64-apple-darwin
 
 [tasks.build-x86_64-apple-darwin-release]
 run_task = [
-    { name = "ps1-build-x86_64-apple-darwin-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-apple-darwin-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-apple-darwin-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-apple-darwin-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-apple-darwin-release]
@@ -530,7 +600,7 @@ dependencies = ["build-x86_64-apple-darwin-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Mac OSX.x86_64-apple-darwin.release" ../bin/x86_64-apple-darwin/enum-property-custom-discriminants.release.x86_64-apple-darwin.dmg
+godot --export "Mac OSX.x86_64-apple-darwin.release" ../bin/x86_64-apple-darwin/export-enum-demo.release.x86_64-apple-darwin.dmg
 '''
 
 [tasks.ps1-build-aarch64-apple-ios-debug]
@@ -554,8 +624,13 @@ mv ../target/aarch64-apple-ios/debug/*.a ../lib/aarch64-apple-ios
 
 [tasks.build-aarch64-apple-ios-debug]
 run_task = [
-    { name = "ps1-build-aarch64-apple-ios-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-aarch64-apple-ios-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-aarch64-apple-ios-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-aarch64-apple-ios-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-aarch64-apple-ios-debug]
@@ -563,7 +638,7 @@ dependencies = ["build-aarch64-apple-ios-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "iOS.aarch64-apple-ios.debug" ../bin/aarch64-apple-ios/enum-property-custom-discriminants.debug.aarch64-apple-ios
+godot --export-debug "iOS.aarch64-apple-ios.debug" ../bin/aarch64-apple-ios/export-enum-demo.debug.aarch64-apple-ios
 '''
 
 [tasks.ps1-build-aarch64-apple-ios-release]
@@ -587,8 +662,13 @@ mv ../target/aarch64-apple-ios/release/*.a ../lib/aarch64-apple-ios
 
 [tasks.build-aarch64-apple-ios-release]
 run_task = [
-    { name = "ps1-build-aarch64-apple-ios-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-aarch64-apple-ios-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-aarch64-apple-ios-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-aarch64-apple-ios-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-aarch64-apple-ios-release]
@@ -596,7 +676,7 @@ dependencies = ["build-aarch64-apple-ios-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "iOS.aarch64-apple-ios.release" ../bin/aarch64-apple-ios/enum-property-custom-discriminants.release.aarch64-apple-ios
+godot --export "iOS.aarch64-apple-ios.release" ../bin/aarch64-apple-ios/export-enum-demo.release.aarch64-apple-ios
 '''
 
 [tasks.ps1-build-i686-pc-windows-gnu-debug]
@@ -620,8 +700,13 @@ mv ../target/i686-pc-windows-gnu/debug/*.dll ../lib/i686-pc-windows-gnu
 
 [tasks.build-i686-pc-windows-gnu-debug]
 run_task = [
-    { name = "ps1-build-i686-pc-windows-gnu-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-pc-windows-gnu-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-pc-windows-gnu-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-pc-windows-gnu-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-pc-windows-gnu-debug]
@@ -629,7 +714,7 @@ dependencies = ["build-i686-pc-windows-gnu-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Windows Desktop.i686-pc-windows-gnu.debug" ../bin/i686-pc-windows-gnu/enum-property-custom-discriminants.debug.i686-pc-windows-gnu.exe
+godot --export-debug "Windows Desktop.i686-pc-windows-gnu.debug" ../bin/i686-pc-windows-gnu/export-enum-demo.debug.i686-pc-windows-gnu.exe
 '''
 
 [tasks.ps1-build-i686-pc-windows-gnu-release]
@@ -653,8 +738,13 @@ mv ../target/i686-pc-windows-gnu/release/*.dll ../lib/i686-pc-windows-gnu
 
 [tasks.build-i686-pc-windows-gnu-release]
 run_task = [
-    { name = "ps1-build-i686-pc-windows-gnu-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-pc-windows-gnu-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-pc-windows-gnu-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-pc-windows-gnu-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-pc-windows-gnu-release]
@@ -662,7 +752,7 @@ dependencies = ["build-i686-pc-windows-gnu-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Windows Desktop.i686-pc-windows-gnu.release" ../bin/i686-pc-windows-gnu/enum-property-custom-discriminants.release.i686-pc-windows-gnu.exe
+godot --export "Windows Desktop.i686-pc-windows-gnu.release" ../bin/i686-pc-windows-gnu/export-enum-demo.release.i686-pc-windows-gnu.exe
 '''
 
 [tasks.ps1-build-x86_64-pc-windows-gnu-debug]
@@ -686,8 +776,13 @@ mv ../target/x86_64-pc-windows-gnu/debug/*.dll ../lib/x86_64-pc-windows-gnu
 
 [tasks.build-x86_64-pc-windows-gnu-debug]
 run_task = [
-    { name = "ps1-build-x86_64-pc-windows-gnu-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-pc-windows-gnu-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-pc-windows-gnu-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-pc-windows-gnu-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-pc-windows-gnu-debug]
@@ -695,7 +790,7 @@ dependencies = ["build-x86_64-pc-windows-gnu-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Windows Desktop.x86_64-pc-windows-gnu.debug" ../bin/x86_64-pc-windows-gnu/enum-property-custom-discriminants.debug.x86_64-pc-windows-gnu.exe
+godot --export-debug "Windows Desktop.x86_64-pc-windows-gnu.debug" ../bin/x86_64-pc-windows-gnu/export-enum-demo.debug.x86_64-pc-windows-gnu.exe
 '''
 
 [tasks.ps1-build-x86_64-pc-windows-gnu-release]
@@ -719,8 +814,13 @@ mv ../target/x86_64-pc-windows-gnu/release/*.dll ../lib/x86_64-pc-windows-gnu
 
 [tasks.build-x86_64-pc-windows-gnu-release]
 run_task = [
-    { name = "ps1-build-x86_64-pc-windows-gnu-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-pc-windows-gnu-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-pc-windows-gnu-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-pc-windows-gnu-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-pc-windows-gnu-release]
@@ -728,7 +828,7 @@ dependencies = ["build-x86_64-pc-windows-gnu-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Windows Desktop.x86_64-pc-windows-gnu.release" ../bin/x86_64-pc-windows-gnu/enum-property-custom-discriminants.release.x86_64-pc-windows-gnu.exe
+godot --export "Windows Desktop.x86_64-pc-windows-gnu.release" ../bin/x86_64-pc-windows-gnu/export-enum-demo.release.x86_64-pc-windows-gnu.exe
 '''
 
 [tasks.ps1-build-i686-pc-windows-msvc-debug]
@@ -752,8 +852,13 @@ mv ../target/i686-pc-windows-msvc/debug/*.dll ../lib/i686-pc-windows-msvc
 
 [tasks.build-i686-pc-windows-msvc-debug]
 run_task = [
-    { name = "ps1-build-i686-pc-windows-msvc-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-pc-windows-msvc-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-pc-windows-msvc-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-pc-windows-msvc-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-pc-windows-msvc-debug]
@@ -761,7 +866,7 @@ dependencies = ["build-i686-pc-windows-msvc-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Windows Desktop.i686-pc-windows-msvc.debug" ../bin/i686-pc-windows-msvc/enum-property-custom-discriminants.debug.i686-pc-windows-msvc.exe
+godot --export-debug "Windows Desktop.i686-pc-windows-msvc.debug" ../bin/i686-pc-windows-msvc/export-enum-demo.debug.i686-pc-windows-msvc.exe
 '''
 
 [tasks.ps1-build-i686-pc-windows-msvc-release]
@@ -785,8 +890,13 @@ mv ../target/i686-pc-windows-msvc/release/*.dll ../lib/i686-pc-windows-msvc
 
 [tasks.build-i686-pc-windows-msvc-release]
 run_task = [
-    { name = "ps1-build-i686-pc-windows-msvc-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-i686-pc-windows-msvc-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-i686-pc-windows-msvc-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-i686-pc-windows-msvc-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-i686-pc-windows-msvc-release]
@@ -794,7 +904,7 @@ dependencies = ["build-i686-pc-windows-msvc-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Windows Desktop.i686-pc-windows-msvc.release" ../bin/i686-pc-windows-msvc/enum-property-custom-discriminants.release.i686-pc-windows-msvc.exe
+godot --export "Windows Desktop.i686-pc-windows-msvc.release" ../bin/i686-pc-windows-msvc/export-enum-demo.release.i686-pc-windows-msvc.exe
 '''
 
 [tasks.ps1-build-x86_64-pc-windows-msvc-debug]
@@ -818,8 +928,13 @@ mv ../target/x86_64-pc-windows-msvc/debug/*.dll ../lib/x86_64-pc-windows-msvc
 
 [tasks.build-x86_64-pc-windows-msvc-debug]
 run_task = [
-    { name = "ps1-build-x86_64-pc-windows-msvc-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-pc-windows-msvc-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-pc-windows-msvc-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-pc-windows-msvc-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-pc-windows-msvc-debug]
@@ -827,7 +942,7 @@ dependencies = ["build-x86_64-pc-windows-msvc-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "Windows Desktop.x86_64-pc-windows-msvc.debug" ../bin/x86_64-pc-windows-msvc/enum-property-custom-discriminants.debug.x86_64-pc-windows-msvc.exe
+godot --export-debug "Windows Desktop.x86_64-pc-windows-msvc.debug" ../bin/x86_64-pc-windows-msvc/export-enum-demo.debug.x86_64-pc-windows-msvc.exe
 '''
 
 [tasks.ps1-build-x86_64-pc-windows-msvc-release]
@@ -851,8 +966,13 @@ mv ../target/x86_64-pc-windows-msvc/release/*.dll ../lib/x86_64-pc-windows-msvc
 
 [tasks.build-x86_64-pc-windows-msvc-release]
 run_task = [
-    { name = "ps1-build-x86_64-pc-windows-msvc-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-x86_64-pc-windows-msvc-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-x86_64-pc-windows-msvc-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-x86_64-pc-windows-msvc-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-x86_64-pc-windows-msvc-release]
@@ -860,7 +980,7 @@ dependencies = ["build-x86_64-pc-windows-msvc-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "Windows Desktop.x86_64-pc-windows-msvc.release" ../bin/x86_64-pc-windows-msvc/enum-property-custom-discriminants.release.x86_64-pc-windows-msvc.exe
+godot --export "Windows Desktop.x86_64-pc-windows-msvc.release" ../bin/x86_64-pc-windows-msvc/export-enum-demo.release.x86_64-pc-windows-msvc.exe
 '''
 
 [tasks.ps1-build-wasm32-unknown-emscripten-debug]
@@ -884,8 +1004,13 @@ mv ../target/wasm32-unknown-emscripten/debug/*.wasm ../lib/wasm32-unknown-emscri
 
 [tasks.build-wasm32-unknown-emscripten-debug]
 run_task = [
-    { name = "ps1-build-wasm32-unknown-emscripten-debug", condition = { platforms = ["windows"] } },
-    { name = "sh-build-wasm32-unknown-emscripten-debug", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-wasm32-unknown-emscripten-debug", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-wasm32-unknown-emscripten-debug", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-wasm32-unknown-emscripten-debug]
@@ -893,7 +1018,7 @@ dependencies = ["build-wasm32-unknown-emscripten-debug"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export-debug "HTML5.wasm32-unknown-emscripten.debug" ../bin/wasm32-unknown-emscripten/enum-property-custom-discriminants.debug.wasm32-unknown-emscripten.html
+godot --export-debug "HTML5.wasm32-unknown-emscripten.debug" ../bin/wasm32-unknown-emscripten/export-enum-demo.debug.wasm32-unknown-emscripten.html
 '''
 
 [tasks.ps1-build-wasm32-unknown-emscripten-release]
@@ -917,8 +1042,13 @@ mv ../target/wasm32-unknown-emscripten/release/*.wasm ../lib/wasm32-unknown-emsc
 
 [tasks.build-wasm32-unknown-emscripten-release]
 run_task = [
-    { name = "ps1-build-wasm32-unknown-emscripten-release", condition = { platforms = ["windows"] } },
-    { name = "sh-build-wasm32-unknown-emscripten-release", condition = { platforms = ["linux", "mac"] } }
+  { name = "ps1-build-wasm32-unknown-emscripten-release", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "sh-build-wasm32-unknown-emscripten-release", condition = { platforms = [
+    "linux",
+    "mac",
+  ] } },
 ]
 
 [tasks.export-wasm32-unknown-emscripten-release]
@@ -926,7 +1056,7 @@ dependencies = ["build-wasm32-unknown-emscripten-release"]
 script_runner = "@shell"
 script = '''
 cd ../godot/
-godot --export "HTML5.wasm32-unknown-emscripten.release" ../bin/wasm32-unknown-emscripten/enum-property-custom-discriminants.release.wasm32-unknown-emscripten.html
+godot --export "HTML5.wasm32-unknown-emscripten.release" ../bin/wasm32-unknown-emscripten/export-enum-demo.release.wasm32-unknown-emscripten.html
 '''
 
 [tasks.audit]
@@ -945,14 +1075,14 @@ args = ["clean"]
 [tasks.create-debug-keystore]
 script_runner = "@shell"
 script = '''
-keytool -keyalg RSA -genkeypair -alias androiddebugkey -keypass android -keystore enum-property-custom-discriminants.debug.keystore -storepass android -dname "CN=Android Debug,O=Android,C=US" -validity 9999 -deststoretype pkcs12
+keytool -keyalg RSA -genkeypair -alias androiddebugkey -keypass android -keystore export-enum-demo.debug.keystore -storepass android -dname "CN=Android Debug,O=Android,C=US" -validity 9999 -deststoretype pkcs12
 mv -b *.keystore ..
 '''
 
 [tasks.create-release-keystore]
 script_runner = "@shell"
 script = '''
-keytool -keyalg RSA -genkeypair -alias enum-property-custom-discriminants -keypass ${@} -keystore enum-property-custom-discriminants.release.keystore -storepass ${@} -dname "CN=enum-property-custom-discriminants,O=Android,C=US" -validity 10000 -deststoretype pkcs12
+keytool -keyalg RSA -genkeypair -alias export-enum-demo -keypass ${@} -keystore export-enum-demo.release.keystore -storepass ${@} -dname "CN=export-enum-demo,O=Android,C=US" -validity 10000 -deststoretype pkcs12
 mv -b *.keystore ..
 '''
 
@@ -992,9 +1122,15 @@ godot -d
 
 [tasks.run]
 run_task = [
-    { name = "run-for-windows", condition = { platforms = ["windows"] } },
-    { name = "run-for-linux", condition = { platforms = ["linux"] } },
-    { name = "run-for-macos", condition = { platforms = ["mac"] } }
+  { name = "run-for-windows", condition = { platforms = [
+    "windows",
+  ] } },
+  { name = "run-for-linux", condition = { platforms = [
+    "linux",
+  ] } },
+  { name = "run-for-macos", condition = { platforms = [
+    "mac",
+  ] } },
 ]
 
 [tasks.test]

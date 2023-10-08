@@ -1,8 +1,11 @@
 mod enum_test;
-use gdnative::prelude::{godot_init, InitHandle};
+use gdnative::prelude::*;
 
-fn init(handle: InitHandle) {
-    handle.add_class::<enum_test::Move>();
+struct ExportEnumDemoLibrary;
+
+#[gdnative::init::callbacks]
+impl GDNativeCallbacks for ExportEnumDemoLibrary {
+    fn nativescript_init(handle: InitHandle) {
+        handle.add_class::<enum_test::Move>();
+    }
 }
-
-godot_init!(init);

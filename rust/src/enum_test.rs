@@ -1,13 +1,15 @@
 use gdnative::prelude::*;
 
-#[derive(Clone, Copy, ExportEnum)]
+#[derive(Debug, Clone, Copy, Export, ToVariant, FromVariant)]
+#[variant(enum = "repr")]
+#[repr(i32)]
 pub enum Direction {
-    Top = 67,
-    Down = 93,
+    Top = -1,
+    Down = 1,
 }
 
-#[derive(NativeClass)]
-#[inherit(Node)]
+#[derive(Debug, NativeClass)]
+#[inherit(Node2D)]
 pub struct Move {
     #[property]
     pub dir: Direction,
@@ -17,15 +19,32 @@ pub struct Move {
 
 #[methods]
 impl Move {
-    pub fn new(_owner: &Node) -> Self {
+    pub fn new(_owner: &Node2D) -> Self {
         Self {
             dir: Direction::Top,
             speed: 1.0,
         }
     }
 
-    #[export]
-    fn _ready(&self, _owner: &Node) {
-        godot_print!("Move ready");
+    #[method]
+    fn _ready(&self) {
+        godot_print!("Move ready: {:?}", self);
+    }
+
+    #[method]
+    fn _process(&self, #[base] owner: &Node2D, delta: f64) {
+        let delta = Vector2::new(0., (self.dir as i32) as f32) * (delta * self.speed) as f32;
+        let new_pos = owner.global_position() + delta;
+        owner.set_global_position(new_pos);
+    }
+
+    #[method]
+    fn _input(&mut self, evt: Ref<InputEvent>) {
+        if unsafe { evt.assume_safe() }.is_action_pressed("ui_accept", false, false) {
+            self.dir = match self.dir {
+                Direction::Top => Direction::Down,
+                Direction::Down => Direction::Top,
+            };
+        }
     }
 }

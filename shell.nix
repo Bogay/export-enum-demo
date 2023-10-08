@@ -3,7 +3,7 @@ with import <nixpkgs> {
 };
 
 stdenv.mkDerivation {
-  name = "enum-property-custom-discriminants";
+  name = "export-enum-demo";
   nativeBuildInputs = [
     cacert
     emacs

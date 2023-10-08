@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://native/Move.gdns" type="Script" id=1]
+[ext_resource path="res://godot-ferris.png" type="Texture" id=2]
 
-[node name="Move" type="Node"]
+[node name="Move" type="Node2D"]
 script = ExtResource( 1 )
-dir = 93
+dir = -1
+speed = 50.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 488, 272 )
+texture = ExtResource( 2 )

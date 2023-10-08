@@ -7,21 +7,21 @@ reloadable=true
 
 [entry]
 
-Android.arm64-v8a="res://../lib/aarch64-linux-android/libenum_property_custom_discriminants.so"
-Android.armeabi-v7a="res://../lib/armv7-linux-androideabi/libenum_property_custom_discriminants.so"
-Android.x86="res://../lib/i686-linux-android/libenum_property_custom_discriminants.so"
-Android.x86_64="res://../lib/x86_64-linux-android/libenum_property_custom_discriminants.so"
-HTML5.wasm32 = "res://../lib/wasm32-unknown-emscripten/enum_property_custom_discriminants.wasm"
-iOS.arm64="res://../lib/aarch64-apple-ios/libenum_property_custom_discriminants.a"
-OSX.64="res://../lib/x86_64-apple-darwin/libenum_property_custom_discriminants.dylib"
-Server.32="res://../lib/i686-unknown-linux-gnu/libenum_property_custom_discriminants.so"
-Server.64="res://../lib/x86_64-unknown-linux-gnu/libenum_property_custom_discriminants.so"
-# Windows.32="res://../lib/i686-pc-windows-gnu/enum_property_custom_discriminants.dll"
-Windows.32="res://../lib/i686-pc-windows-msvc/enum_property_custom_discriminants.dll"
-# Windows.64="res://../lib/x86_64-pc-windows-gnu/enum_property_custom_discriminants.dll"
-Windows.64="res://../lib/x86_64-pc-windows-msvc/enum_property_custom_discriminants.dll"
-X11.32="res://../lib/i686-unknown-linux-gnu/libenum_property_custom_discriminants.so"
-X11.64="res://../lib/x86_64-unknown-linux-gnu/libenum_property_custom_discriminants.so"
+Android.arm64-v8a="res://../lib/aarch64-linux-android/libexport_enum_demo.so"
+Android.armeabi-v7a="res://../lib/armv7-linux-androideabi/libexport_enum_demo.so"
+Android.x86="res://../lib/i686-linux-android/libexport_enum_demo.so"
+Android.x86_64="res://../lib/x86_64-linux-android/libexport_enum_demo.so"
+HTML5.wasm32 = "res://../lib/wasm32-unknown-emscripten/export_enum_demo.wasm"
+iOS.arm64="res://../lib/aarch64-apple-ios/libexport_enum_demo.a"
+OSX.64="res://../lib/x86_64-apple-darwin/libexport_enum_demo.dylib"
+Server.32="res://../lib/i686-unknown-linux-gnu/libexport_enum_demo.so"
+Server.64="res://../lib/x86_64-unknown-linux-gnu/libexport_enum_demo.so"
+# Windows.32="res://../lib/i686-pc-windows-gnu/export_enum_demo.dll"
+Windows.32="res://../lib/i686-pc-windows-msvc/export_enum_demo.dll"
+# Windows.64="res://../lib/x86_64-pc-windows-gnu/export_enum_demo.dll"
+Windows.64="res://../lib/x86_64-pc-windows-msvc/export_enum_demo.dll"
+X11.32="res://../lib/i686-unknown-linux-gnu/libexport_enum_demo.so"
+X11.64="res://../lib/x86_64-unknown-linux-gnu/libexport_enum_demo.so"
 
 [dependencies]
 
